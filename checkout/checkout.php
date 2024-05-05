@@ -64,7 +64,7 @@ if (!isset($_SESSION['customer_id'])) {
                     <label for="lastName">Contact Number</label>
                     <input type="number" class="form-control" id="contactNumber" placeholder="09123456789" value="" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
                     <div class="invalid-feedback">
-                    Contact Number is required.
+                    11 digit number must start with 09
                     </div>
                 </div>
                 </div>
@@ -467,6 +467,40 @@ if (!isset($_SESSION['customer_id'])) {
     }
 
     $('#email').on('input', validate);
+
+    // Custom validation function for contact number
+function validateContactNumber() {
+    var contactNumber = document.getElementById("contactNumber").value;
+    // Check if contact number starts with "09" and has exactly 11 digits
+    if (!/^09\d{9}$/.test(contactNumber)) {
+        document.getElementById("contactNumber").classList.add("is-invalid");
+        return false;
+    } else {
+        document.getElementById("contactNumber").classList.remove("is-invalid");
+        return true;
+    }
+}
+
+    // Call validation function on input change
+    document.getElementById("contactNumber").addEventListener("input", function() {
+        validateContactNumber(); // Call the validation function when the input changes
+    });
+
+    // Validate form before submission
+    document.querySelector("form").addEventListener("submit", function(event) {
+        if (!validateContactNumber()) {
+            event.preventDefault(); // Prevent form submission if validation fails
+            // Display SweetAlert modal for invalid contact number format
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid Contact Number',
+                text: 'Contact number must start with "09" and have 11 digits.',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ok'
+            });
+        }
+    });
 
    </script>
   </body>

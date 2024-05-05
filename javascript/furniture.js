@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Event listener for close button in modal
-  document.querySelector(".close").addEventListener("click", closeModal);
+  // document.querySelector(".close").addEventListener("click", closeModal);
 
   // Event listener to close modal when clicking outside modal content
   document.getElementById("modal").addEventListener("click", function (event) {

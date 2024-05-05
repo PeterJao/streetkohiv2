@@ -47,6 +47,15 @@ $seller_bread = DB::query("SELECT SUM(a.product_qty) as sum, b.coffee_name FROM 
                 inner join coffee as b on(a.product_id = b.coffee_id) WHERE b.coffee_tag='bread-pastry'
                 AND a.date_inserted BETWEEN '$start' AND '$end' group by a.product_id order by sum DESC"); 
 
+$text_last = '';
+
+if ($seller_bread) {
+	$text_last = '<tr>
+				<td style="border: 1px solid; text-align: center;">Bread-pastry</td>
+				<td style="border: 1px solid; text-align: center;">'.$seller_bread[0]['coffee_name'].'</td>
+				<td style="border: 1px solid; text-align: center;">'.$seller_bread[0]['sum'].'</td>
+			</tr>';
+}
 
 
 
@@ -112,11 +121,7 @@ $dompdf->loadHtml('
 				<td style="border: 1px solid; text-align: center;">'.$seller_non_caffeine[0]['coffee_name'].'</td>
 				<td style="border: 1px solid; text-align: center;">'.$seller_non_caffeine[0]['sum'].'</td>
 			</tr>
-			<tr>
-				<td style="border: 1px solid; text-align: center;">Bread-pastry</td>
-				<td style="border: 1px solid; text-align: center;">'.$seller_bread[0]['coffee_name'].'</td>
-				<td style="border: 1px solid; text-align: center;">'.$seller_bread[0]['sum'].'</td>
-			</tr>
+			'.$text_last.'
 		</tbody>	
 	</table>
 	</div>

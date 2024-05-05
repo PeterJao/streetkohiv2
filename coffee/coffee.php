@@ -1,6 +1,14 @@
 <?php
+
+
 session_start();
+
+if (!isset($_SESSION['customer_id'])) {
+    $_SESSION['customer_id'] = 0;
+}
 include '../admin/products/connect.php';
+
+
 
 // Function to fetch coffee products based on category
 function fetchCoffeeProducts($category) {
@@ -137,17 +145,14 @@ function fetchCoffeeProducts($category) {
     <div class="main-content-container">
     <div class="main">
         <!-- Header (Div 1 coffee-for-kohi and cart) -->
-        <div class="header">
+         <div class="header">
             <span class="coffee-for-kohi">Coffee for Kohi</span>
-            <?php
-        $customer_id = 0; // set the customer_id to 0
-        if (isset($customer_id)):
-        ?>
-                        <a href="../addtocart/addtocart.php" class="cart" id="cartButton">
-                            <span id="cartcount" style="background-color: red; font-size: 20px; position: absolute; color: white; border-radius: 20px; width: 20px;"> 0 </span>
-                            <img class="pic-cart" src="../assets/images/cart.svg">
-                        </a>
-        <?php endif;?>
+            <?php if (isset($_SESSION['customer_id']) && $_SESSION['customer_id'] !== 0): ?>
+                <a href="../addtocart/addtocart.php" class="cart" id="cartButton">
+                    <span id="cartcount" style="background-color: red; font-size: 20px; position: absolute; color: white; border-radius: 20px; width: 20px;"> 0 </span>
+                    <img class="pic-cart" src="../assets/images/cart.svg">
+                </a>
+            <?php endif; ?>
         </div>
         
         <!-- Sidebar -->

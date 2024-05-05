@@ -202,8 +202,8 @@ echo '</div>';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- JavaScript Files -->
-    <script src="../javascript/furniture.js"></script>
-    <script src="../javascript/header.js"></script>
+    <!-- <script src="../javascript/furniture.js"></script>
+    <script src="../javascript/header.js"></script> -->
 </body>
 
 </html>
