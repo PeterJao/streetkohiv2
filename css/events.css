@@ -1,0 +1,544 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); 
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap"); 
+ 
+body { 
+  font-family: "Poppins", sans-serif; 
+} 
+ 
+/* Hover effect for event cards */ 
+.event-card:hover{ 
+  background-color: #f8f8f8; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+} 
+ 
+
+/* Divider styling */ 
+.hr { 
+  margin-top: 1rem; 
+  margin-bottom: 1rem; 
+  border: 1px; 
+  border-top: 50px solid rgba(242, 157, 11, 0.712); 
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 4%;
+  margin-right: 4%;
+} 
+ 
+/* Carousel styling start */ 
+ 
+ /* yung hindi ko ma ayos ayos na carousel */
+.carousel { 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 20px; 
+ 
+  /* border: 20px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 20px; 
+  padding-left: 10px; 
+  padding-right: 10px; 
+  padding-top: 10px; 
+  padding-bottom: 10px; 
+  max-width: 100%; 
+  width: 100%; 
+  height: 100%; 
+  overflow: hidden; */ 
+} 
+ 
+.carousel-item img { 
+  aspect-ratio:  16 / 9; 
+  /* padding: 20px; */ 
+  width: 100%; 
+  /* object-fit: cover; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; */ 
+} 
+ 
+/* Carousel styling end */ 
+ 
+.TitlePage { 
+  text-align: center;
+  padding-left:  100px;
+  padding-bottom: 25px;
+  font-size: 75px;
+  color: #5a483c;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: bold;
+} 
+ 
+.TitleEvent { 
+  text-align: left;
+  padding-left:  100px;
+  padding-bottom: 25px;
+  font-size: 50px;
+  color: #9f6b39;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: bold;
+} 
+ 
+ 
+/* event cards end */ 
+
+.current-events-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.event-card {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid transparent;
+
+}
+
+.card {
+  padding: 5px;
+  border: 1px solid transparent;
+}
+
+
+.event-card img {
+  height: 350px;
+  max-width: 100vh;
+  background-color: #e0c1a0;
+  box-shadow: 0 5px 10px rgba(159, 107, 57, 0.8);
+  margin-bottom: 10px;
+}
+
+
+.card-txt { 
+  text-align: left; 
+  padding: 1px; 
+  font-size: auto-fit; 
+  overflow-wrap: break-word; 
+} 
+ 
+.tablecards { 
+  display: flex; 
+  flex-direction: row; 
+} 
+
+.card-body { 
+  padding: 10px;  
+  width: 25vh;
+}  
+ 
+a.card-link { 
+  text-decoration: none; 
+  color: inherit; 
+  cursor: pointer;  
+} 
+/* event cards end */
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@500&display=swap");
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(204, 192, 167, 0.8);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(241, 241, 241, 0.7);
+}
+
+/* Body Font */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Hover effect for event cards */
+.event-card:hover {
+  background-color: #f8f8f8;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Divider styling */
+.hr {
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-top: 55px solid #e7dfd9;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+
+/* Container for the carousel */
+.container {
+  width: 90%;
+  height: 100%;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+/* Carousel container */
+#slider {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Adjusted max-width */
+  margin: 0 auto;
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Slide container */
+.carousel-inner {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+/* Individual slide */
+.carousel-item {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: 100%; /* Full width for each slide */
+}
+
+/* Image styling */
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Navigation buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.4); /* Transparent background */
+  border: none;
+  border-radius: 50%;
+  padding: 0.5em;
+  width: 2.5em; /* Adjusted width */
+  height: 2.5em; /* Adjusted height */
+  color: black;
+  font-size: 1.5em; /* Adjusted font size */
+  cursor: pointer;
+}
+
+.carousel-control-prev {
+  left: 1em; /* Adjusted left position */
+}
+
+.carousel-control-next {
+  right: 1em; /* Adjusted right position */
+}
+
+/* Additional styles from provided CSS */
+
+/* Carousel */
+#carousel {
+  position: relative;
+  height: 400px;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+#carousel div {
+  position: absolute;
+  transition: transform 400ms, left 400ms, opacity 400ms, z-index 0s;
+  opacity: 1;
+}
+
+#carousel div img {
+  width: 400px;
+  transition: width 400ms;
+  -webkit-user-drag: none;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 10px;
+}
+
+#carousel div.hideLeft {
+  left: 0%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+
+#carousel div.hideLeft img {
+  width: 200px;
+}
+
+#carousel div.hideRight {
+  left: 100%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+
+#carousel div.hideRight img {
+  width: 200px;
+}
+
+#carousel div.prev {
+  z-index: 5;
+  left: 30%;
+  transform: translateY(50px) translateX(-50%);
+}
+
+#carousel img:hover {
+  cursor: pointer;
+}
+
+#carousel div.prev img {
+  width: 300px;
+}
+
+#carousel div.prevLeftSecond {
+  z-index: 4;
+  left: 15%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+
+#carousel div.prevLeftSecond img {
+  width: 200px;
+}
+
+#carousel div.selected {
+  z-index: 10;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+}
+
+#carousel div.next {
+  z-index: 5;
+  left: 70%;
+  transform: translateY(50px) translateX(-50%);
+}
+
+#carousel div.next img {
+  width: 300px;
+}
+
+#carousel div.nextRightSecond {
+  z-index: 4;
+  left: 85%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+
+#carousel div.nextRightSecond img {
+  width: 200px;
+}
+
+/* Previous or next buttons CSS */
+.buttons {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 100px;
+}
+
+.button-82-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-82-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+  );
+}
+
+.button-82-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+  .button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.button-82-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+/* Hover effect for the cards */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Title styling */
+.TitlePage {
+  text-align: left;
+  padding-left: 0px;
+  font-size: 55px;
+  color: #5a483c;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: bolder;
+}
+
+
+/* Event card styling */
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.event-card {
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.event-card img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+a.card-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Add space between upcoming and incoming events */
+.TitleEvent {
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.Nameplate {
+  text-align: center;
+  font-weight: bold;
+  color: #5a483c;
+}
+
+
+hr {
+  margin:5px 18px; /* Adds margin above and below the hr element */
+  border: 27px solid #e7dfd9; /* Sets the border style */
+}
+
+/* Styling for h2.Nameplate elements */
+.Nameplate {
+  color: #9f6b39; /* Set the text color to #9f6b39 */
+  font-weight: bold; /* Make the text bold */
+  padding: 10px 20px; /* Add padding around the text */
+  border-radius: 5px; /* Add rounded corners */
+  transition: background-color 0.3s; /* Add transition effect for background color */
+}
+
+/* CSS to customize the close button in the modal */
+.modal .btn-close {
+  /* Change the background color of the close button */
+  background-color: #f04021; /* Example: tomato color */
+  /* Change the color of the 'X' icon */
+  color: white;
+  /* Adjust the border-radius of the button */
+  border-radius: 50%;
+  /* Adjust the padding of the button */
+  padding: 10px;
+  /* Adjust the border of the button */
+  border: none;
+  /* Adjust the font size of the button */
+  font-size: 1.2rem;
+}
+
+/* Optional: Add hover effects for the close button */
+.modal .btn-close:hover {
+  background-color: #ff4500; /* Example: darker orange color */
+  color: black;
+}
+
+.modal-body {
+  text-align: left; /* Ensures text is left-aligned */
+}

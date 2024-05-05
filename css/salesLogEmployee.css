@@ -1,0 +1,63 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(204, 192, 167, 0.8);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(241, 241, 241, 0.7);
+}
+
+/* CSS for first row of each order */
+.order-row td {
+    border: 1px solid #584926; /* Add borders */
+    padding: 8px;
+    text-align: left;
+}
+
+/* Table styling */
+.sales-log-table {
+    max-width: 800px; /* Set maximum width of the table */
+    margin: 0 auto; /* Center the table horizontally */
+    border-collapse: collapse; /* Collapse table borders */
+}
+
+.sales-log-table th,
+.sales-log-table td {
+    border: 1px solid #584926;
+    padding: 8px;
+    text-align: center; 
+
+}
+
+.sales-log-table th {
+    background-color: #d7c2b2;
+    color: #584926;
+    font-weight: bold;
+}
+
+.sales-log-table td {
+    background-color: #f8f8f8; /* Light gray background for rows */
+}
+
+.sales-log-title {
+    text-align: center; /* Center align the text */
+    margin-bottom: 20px; /* Add space below the title */
+    font-weight: bold;
+
+}

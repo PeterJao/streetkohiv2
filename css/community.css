@@ -1,0 +1,445 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@500&display=swap");
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(204, 192, 167, 0.8);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(241, 241, 241, 0.7);
+}
+
+/* Body */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-bottom: 50px;
+}
+
+/* Header */
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.kubo-disensyo {
+  color: #9f6b39;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.heading {
+  font-size: 2.1em;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  color: #5a483c;
+}
+
+.main-content {
+  margin-top: 2.5rem;
+  justify-content: center; /* Center the content horizontally */
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto; /* Center the content horizontally */
+  display: flex;
+  justify-content: center; /* Center the card container horizontally */
+}
+
+.separator-community {
+  border: none;
+  height: 50px;
+  margin: 10px 5px;
+  background-color: #e7dfd9;
+}
+
+.h1-furniture {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-family: "Poppins", sans-serif;
+  color: #5a483c;
+  font-weight: 900;
+}
+
+.tablecards {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap */
+  justify-content: center; /* Center the cards horizontally */
+  gap: 10px;
+}
+
+.card {
+  width: 300px;
+  background-color: #f5f5f5;
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: transform 0.3s ease;
+  margin-bottom: 2.5rem;
+}
+
+.h3-item {
+  color: #9f6b39;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+}
+
+.card-txt {
+  text-align: left;
+}
+
+.p-price {
+  color: #5a483c;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 0 !important;
+  margin-top: 1rem;
+}
+
+.custom-btn {
+  background-color: #5a483c !important;
+  color: white !important;
+}
+
+.custom-btn:hover {
+  background-color: #9f6b39 !important;
+}
+
+@media (max-width: 768px) {
+  .tablecards {
+    flex-direction: column;
+  }
+  .row {
+    display: block;
+  }
+  .card-container {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.pagination-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.pagination {
+  font-family: "Abel", sans-serif;
+  display: inline-flex;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.pagination .page {
+  color: #490404;
+  background: #eee;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 40px;
+  height: 40px;
+  width: 35px;
+  padding: 0;
+  margin: 20px;
+  margin-bottom: 40px;
+  border: none;
+  border-radius: 10px;
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s ease 0s;
+}
+
+.pagination .page:hover,
+.pagination .page:focus {
+  color: #fff;
+  background: #490404;
+  line-height: 47px;
+}
+
+.pagination .page:before {
+  content: "";
+  background-color: #fff;
+  border-radius: 30px;
+  opacity: 0;
+  transform-origin: top right;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  right: 5px;
+  bottom: 0;
+  z-index: -1;
+  transition: all 0.3s ease 0s;
+}
+
+.pagination .page:hover:before,
+.pagination .page:focus:before {
+  opacity: 1;
+  transform: scale(0.15);
+}
+
+.page.active {
+  background-color: #490404; /* Darker shade for active state */
+  color: #fff; /* White text for active state */
+  transform: scale(0.95); /* Slightly reduce the size for active state */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+}
+
+.ellipsis {
+  font-size: 20px; /* Adjust size as needed */
+  line-height: 40px; /* Adjust line height to match pagination links */
+  width: auto; /* Adjust width as needed */
+  padding: 0 10px; /* Add padding for better alignment */
+  color: #490404; /* Match the color with pagination links */
+  border-radius: 10px; /* Match the border-radius with pagination links */
+  display: inline-block; /* Ensure it's inline with the pagination links */
+  margin-top: 30px;
+}
+@media only screen and (max-width: 480px) {
+  .pagination {
+    font-size: 0;
+    display: inline-block;
+  }
+  .pagination .page {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.carousel { 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 20px; 
+}
+
+
+/* Carousel */
+#carousel {
+  position: relative;
+  height: 400px;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+#carousel div {
+  position: absolute;
+  transition: transform 400ms, left 400ms, opacity 400ms, z-index 0s;
+  opacity: 1;
+}
+
+#carousel div img {
+  width: 400px;
+  transition: width 400ms;
+  -webkit-user-drag: none;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 10px;
+}
+
+#carousel div.hideLeft {
+  left: 0%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+
+#carousel div.hideLeft img {
+  width: 200px;
+}
+
+#carousel div.hideRight {
+  left: 100%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+
+#carousel div.hideRight img {
+  width: 200px;
+}
+
+#carousel div.prev {
+  z-index: 5;
+  left: 30%;
+  transform: translateY(50px) translateX(-50%);
+}
+
+#carousel img:hover {
+  cursor: pointer;
+}
+
+#carousel div.prev img {
+  width: 300px;
+}
+
+#carousel div.prevLeftSecond {
+  z-index: 4;
+  left: 15%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+
+#carousel div.prevLeftSecond img {
+  width: 200px;
+}
+
+#carousel div.selected {
+  z-index: 10;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+}
+
+#carousel div.next {
+  z-index: 5;
+  left: 70%;
+  transform: translateY(50px) translateX(-50%);
+}
+
+#carousel div.next img {
+  width: 300px;
+}
+
+#carousel div.nextRightSecond {
+  z-index: 4;
+  left: 85%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+
+#carousel div.nextRightSecond img {
+  width: 200px;
+}
+
+hr.rounded {
+  border-top: 30px solid #9f6b39;
+  border-radius: 5px;
+}
+
+/* appointment button */
+.pushable {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  background: transparent;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+  outline-offset: 4px;
+  outline-color: deeppink;
+  transition: filter 250ms;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: hsl(0, 0%, 0%);
+  border-radius: 8px;
+  filter: blur(2px);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background: linear-gradient(
+    to right,
+    hsl(15, 18%, 26%) 0%,
+    hsl(15, 18%, 26%) 8%,
+    hsl(15, 18%, 26%) 92%,
+    hsl(15, 18%, 26%) 100%
+  );
+}
+
+.front {
+  display: block;
+  position: relative;
+  border-radius: 8px;
+  background: hsl(31, 49%, 72%);
+  padding: 16px 32px;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.pushable:hover {
+  filter: brightness(110%);
+}
+
+.pushable:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.pushable:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.pushable:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}

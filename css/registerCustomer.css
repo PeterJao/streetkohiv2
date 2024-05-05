@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@12..96&display=swap");
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(204, 192, 167, 0.8);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(241, 241, 241, 0.7);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+ }
+ 
+ * {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ .card {
+  display: none;
+  background-color: #ccbd9b9d;
+  padding: 20px;
+  border: 1px solid #5a483c;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 1rem;
+  margin: 0 auto; /* Center horizontally */
+  margin-top: 13rem;
+  margin-bottom: 2rem;
+}
+
+.card h2 {
+  text-align: center;
+}
+
+.card input[type="text"],
+.card input[type="email"],
+.card input[type="password"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+}
+.card button {
+  width: 100%;
+  padding: 10px;
+  background-color: #5a483c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+.card button:hover {
+  background-color: #53482e;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 80%;
+  }
+
+  .card input[type="text"],
+  .card input[type="email"],
+  .card input[type="password"] {
+    padding: 12px; /* Increase padding for larger input fields */
+    font-size: 16px; /* Increase font size for better readability */
+  }
+
+  .card button {
+    padding: 12px; /* Increase padding for larger button */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    width: 90%;
+  }
+
+  .card input[type="text"],
+  .card input[type="email"],
+  .card input[type="password"] {
+    padding: 10px; /* Further increase padding for smaller screens */
+    font-size: 14px; /* Further increase font size for smaller screens */
+  }
+
+  .card button {
+    padding: 10px; /* Further increase padding for smaller screens */
+  }
+}

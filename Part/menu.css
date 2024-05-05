@@ -1,0 +1,49 @@
+h1 {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 2em;
+  margin-top: 2em;
+  margin-bottom: 0.67em;
+  margin-left: 3.48em;
+  margin-right: 0;
+  left: 300px;
+  font-weight: bold;
+  color: #9f6b39;
+}
+
+h3 {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: #5a483c;
+}
+
+h2 {
+  margin-left: 3em;
+}
+.cart {
+  left: 1200px;
+  top: 80px;
+  position: fixed;
+  height: 5%;
+}
+
+.sidebar {
+  position: abosulute;
+  height: 200%;
+  width: 300px;
+  overflow-x: hidden;
+  padding-top: 0px;
+  padding-left: 125px;
+}
+
+.sidebar .form-check {
+  padding: 10px;
+}
+
+.content {
+  margin-left: 260px;
+  padding: 20px;
+}
+
+/*CARD*/

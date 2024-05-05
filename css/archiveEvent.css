@@ -1,0 +1,173 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(204, 192, 167, 0.8);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(241, 241, 241, 0.7);
+}
+
+/* Header container styling */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin bottom for spacing between header and content */
+}
+
+/* Header container title styling */
+.header-container h2 {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+/* Content section styling */
+.content-section {
+    padding: 20px;
+    margin-top: 120px; /* Add margin at the top to provide space below the header */
+}
+
+/* Container styling */
+.container {
+    padding: 20px;
+}
+
+/* Table styling */
+.table-striped.archive-table {
+    width: 150%; /* Increase table width while keeping it within the container */
+    border-collapse: collapse;
+    margin-top: 20px;
+    max-width: 500px; /* Set fixed width */
+    margin: 20px auto; /* Add margin */
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+.table-striped.archive-table th,
+.table-striped.archive-table td {
+    border: 1px solid #584926;
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap; /* Prevent wrapping */
+
+    
+}
+
+.table-striped.archive-table th {
+    background-color: #d7c2b2;
+    color: #584926;
+    font-weight: bold;
+}
+
+.table-striped.archive-table td {
+    background-color: #f8f8f8; /* Light gray background for rows */
+   
+}
+
+.table-striped.archive-table tr:hover {
+    background-color: #f0e6d6; /* Highlight rows on hover */
+}
+
+/* Button styling */
+button,
+input[type="submit"] {
+    padding: 8px 16px;
+    background-color: #5aa85e; /* Toned down green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 15px; /* Increase right margin to add space between buttons */
+    margin-bottom: 5px; /* Add bottom margin to space out buttons vertically */
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #61b361; /* Slightly darker green on hover */
+}
+
+/* Delete button styling */
+button.delete-button {
+  background-color: #e74c3c; /* Red color */
+  color: white;
+}
+
+button.delete-button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+/* Confirmation modal */
+.modal {
+    display: none; /* Hide by default */
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Adjusted modal width */
+    border-radius: 8px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add any other custom styles here */
+
+td,
+th {
+  border: 3px solid #584926;
+  padding: 8px;
+  max-width: 200px; /* Limit maximum width of cells */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add ellipsis for overflow content */
+  white-space: nowrap; /* Prevent wrapping */
+}

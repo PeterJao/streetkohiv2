@@ -1,0 +1,124 @@
+/* CSS for the table */
+
+.main-content-container {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  overflow: auto;
+  white-space: none;
+}
+
+.coffee-table {
+  background-color: #cc9e7d;
+  width: 100vw;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border-radius: 10px;
+  text-align: left;
+  padding: 8px;
+  word-wrap: break-word;
+  table-layout: fixed;
+}
+
+td,
+th,
+tr {
+  font-size: 14px;
+  border: 3px solid #584926;
+  padding: 8px;
+  max-width: 200px; /* Limit maximum width of cells */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add ellipsis for overflow content */
+  white-space: nowrap; /* Prevent wrapping */
+  word-break: break-all; /* Breaks words to prevent overflow */
+  overflow-wrap: anywhere;
+}
+
+.coffee-image {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/* Styles for scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(204, 192, 167, 0.8);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(241, 241, 241, 0.7);
+}
+
+.pagination-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination {
+  font-family: "Abel", sans-serif;
+  display: flex;
+  flex-direction: row;
+}
+
+.page {
+  color: #490404;
+  background: #eee;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 40px;
+  height: 40px;
+  width: 35px;
+  padding: 0;
+  margin: 0 5px;
+  border: none;
+  border-radius: 10px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s ease 0s;
+}
+
+.page:hover,
+.page:focus {
+  color: #fff;
+  background: #490404;
+  line-height: 47px;
+}
+
+.page:before {
+  content: "";
+  background-color: #fff;
+  border-radius: 30px;
+  opacity: 0;
+  transform-origin: top right;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  right: 5px;
+  bottom: 0;
+  z-index: -1;
+  transition: all 0.3s ease 0s;
+}
+
+.page:hover:before,
+.page:focus:before {
+  opacity: 1;
+  transform: scale(0.15);
+}
+
+.page.active {
+  background-color: #490404;
+  color: #fff;
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 480px) {
+  .pagination {
+    justify-content: space-between;
+  }
+}

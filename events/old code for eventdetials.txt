@@ -1,0 +1,194 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <link rel="icon" type="image/x-icon" href="../assets/images/SK-Icon.png"> 
+    <link rel="stylesheet" type="text/css" href="event-details.css"> 
+    <title>Event Details</title> 
+
+</head> 
+<body> 
+    
+
+    <!-- Header --> 
+    <div> 
+        <?php include "../header/header.php" ?> 
+    </div> 
+
+    <!-- containers of event details -->
+    <div class="main-content">
+        <div class="event-details-container">
+            <div class="event-details">
+                
+                <?php 
+                // to get event name
+                $eventNum = $_GET['event']; 
+
+                $eventDetails = [ 
+                    'Event 1' => [ 
+                        'Name' => 'Valentines Coffee Date', 
+                        'Image' => '../assets/events/Valentines.jpg', 
+                        'Date' => 'February 14, 2023', 
+                        'Time' => '9:00 AM - 11:00 PM', 
+                        'Venue' => 'Street Kohi, Maginhawa', 
+                        'Description' => 'Street Kohi Greets you a tender loving valentines this Feb 14, 2024 
+                        Drop by at our Marriage Booth! Pick a random customer and take a picture at our Marriage Booth 
+                        and get 20% Discount! Baka dito niyo pa makita si Juan!'
+                    ], 
+
+                    'Event 2' => [ 
+                        'Name' => '#NTJPO', 
+                        'Image' => '../assets/events/NTJPO.jpg', 
+                        'Date' => 'February 11, 2023', 
+                        'Time' => '1:00 PM - 5:00 PM', 
+                        'Venue' => 'Ugly Duck, Poblacion', 
+                        'Description' => 'ALL PROCEEDS GO TO JEEPNEY DRIVERS THROUGH TANGGOL PASADA NETWORK 🚘 
+                        Stand in solidarity with transport workers & commuters alongside these artists & merchants! 🤜🏽🤛🏽 
+                        Art & Merch by 
+                        byresidents @byresidents 
+                        ar1sing @ar1sing 
+                        martspng @martspng 
+                        jhem3rlyn @jhem3rlyn_  
+                        Makò Micro-Press @mako.micropress 
+                        marianie @marianieart 
+                        gusstelier @gusstelier 
+                        sobsannix @sobsannix 
+                        Luntiang Palamuti atbp. @luntiangpalamutiatbp 
+                        Kulas Jalea @kulasjalea 
+                        Coffee, Clothing, Food, & Tattoos 
+                        Ugly Duck @uglyduckpoblacion 
+                        Street Kōhī @streetkohi 
+                        Tattoo Nebula @tattoonebula.art 
+                        — 
+                        ⛔️ PLEASE TELL NANAY #NOTOJEEPNEYPHASEOUT ⛔️ 
+                        🫂 CO-PRESENTED BY 
+                        Manila Community Radio @manilacommunityradio 
+                        Ugly Duck @uglyduckpoblacion 
+                        Kalye Tunes: UP Fair Wednesday @kalyetunes 
+                        ❤️‍🩹 SPONSORED BY 
+                        Wonder Collab Studios @wondercollabstudios 
+                        🤛🏽 SPECIAL THANKS TO 
+                        Inklusibo @inklusibo 
+                        PARA! @para_ait', 
+                        'Link' => 'https://docs.google.com/forms/d/e/1FAIpQLSeCshzGeQLOOKC6AvNqvKW5vO1BzVIZGEAOFQXVc0Dib8kbCg/closedform' 
+                    ], 
+
+                    'Event 3' => [ 
+                        'Name' => 'Intimate Gig', 
+                        'Image' => '../assets/events/IntGig.jpg', 
+                        'Date' => 'February 4, 2023', 
+                        'Time' => '10:00 AM - 11:00 PM', 
+                        'Venue' => 'Street kohi, Mayaman', 
+                        'Description' => '‼️ FULL LINE-UP ‼️ 
+                        📢 PARA! Sa Bayan: #NoToJeepneyPhaseout  
+                        (LIMITED SLOTS ONLY) 
+                        Enjoy OPM intimate gig as donations will be given to Kilusang Mayo Uno and PISTON Group. 
+                        Performances by: 
+                        SUGARCANE 
+                        Healy After Dark 
+                        Jikamarie 
+                        Mint Magic 
+                        HUNYO Music 
+                        Martin Riggs 
+                        Pappel 
+                        Activities: 1PM 
+                        Live bands: 4PM', 
+                        'Link' => 'https://forms.gle/oDAo7bTFcXmH81YX9'
+                    ],
+
+                    'Event 4' => [ 
+                        'Name' => 'Entrepreneur Talk', 
+                        'Image' => '../assets/events/Entrep.jpg', 
+                        'Date' => 'February 16, 2023', 
+                        'Time' => 'Starts at 8:00 PM', 
+                        'Venue' => 'Street Kohi, Maginhawa', 
+                        'Description' => 'What is Art Entrepreneurship? 
+                        The artist-entrepreneur is a visionary individual who combines artistic talent with
+                        entrepreneurial spirit. this unique breed of creative professionals not only possesses
+                        a deep passion for their craft but also has the drive and bussiness acumen to turn their
+                        artistic endeavors into successful ventures'
+                        
+                    ],
+                    'Event 5' => [ 
+                        'Name' => 'Studio Ghibli Painting', 
+                        'Image' => '../assets/events/SGPaint.jpg', 
+                        'Date' => 'March 2, 2023', 
+                        'Time' => '9:00 AM to 1:00 PM', 
+                        'Venue' => 'Street Kohi, Maginhawa', 
+                        'Description' => '❗𝗟𝗮𝘀𝘁 𝗪𝗼𝗿𝗸𝘀𝗵𝗼𝗽 𝗗𝗮𝘁𝗲❗
+                        𝗦𝘁𝘂𝗱𝗶𝗼 𝗚𝗵𝗶𝗯𝗹𝗶 𝗦𝗰𝗲𝗻𝗲𝘀 𝗔 𝗚𝗼𝘂𝗮𝗰𝗵𝗲 𝗣𝗮𝗶𝗻𝘁𝗶𝗻𝗴 𝗪𝗼𝗿𝗸𝘀𝗵𝗼𝗽
+                        Learn to paint a simple nostalgic scene from Studio Ghibli with gouache! After this class,
+                         youll learn how to romanticize real-life landscapes and paint them
+                         in a Studio Ghibli-inspired manner 🌳
+                        All these while enjoying your choice of drink and pastry from Street Kohi ☕️',
+                        'Link' => 'https://form.jotform.com/240373281040445'
+                        
+                    ], 
+                    'Event 6' => [ 
+                        'Name' => 'Pottery Making', 
+                        'Image' => '../assets/events/Pottery.jpg', 
+                        'Date' => 'March 3, 2023', 
+                        'Time' => '10:00 AM to 1:00 PM', 
+                        'Venue' => 'Street Kohi, Maginhawa', 
+                        'Description' => 'HEADS UP QC!!! ❤️
+                        For those who cant come to Bulacan, @mari.potteri is finally doing a class in the metro!! ❤️ 
+                        Together with @streetkohi , we will be holding a pottery class in Maginhawa this March 3!! 
+                        So yes, lets go!!! ❤️
+                        SEE YOU? SEEE YAAAAAHHHHHH!!!',
+                        'Link' => 'https://forms.gle/gnalbxykjornha9a'
+                        
+                    ]
+
+                ]; 
+
+                if (array_key_exists($eventNum, $eventDetails)) { 
+                    echo '<img class="event-image" src="' . $eventDetails[$eventNum]['Image'] . '" alt="' . $eventDetails[$eventNum]['Name'] . '">';// Image here 
+                    echo '<h2 class="event-title">' . $eventDetails[$eventNum]['Name'] . '</h2>'; // Title here 
+                    echo '<p class="event-date">Date: ' . $eventDetails[$eventNum]['Date'] . '</p>'; // Date here 
+                    echo '<p class="event-time">Time: '. $eventDetails[$eventNum]['Time'] . '.</p>'; // Time here 
+                    echo '<p class="event-where">Venue: '. $eventDetails[$eventNum]['Venue'] . '</p>'; // Venue here 
+                    echo '<p class="event-description">' . $eventDetails[$eventNum]['Description'] . '</p>'; // Description here 
+
+
+                    // Button code naka if else para kung walang link for registration edi sasabihin no registration needed
+                    if (isset($eventDetails[$eventNum]['Link'])) { 
+                        echo '<a href="' . $eventDetails[$eventNum]['Link'] . '" class="btn regbtn">Register</a>';
+                    } else { 
+                        echo '<button onclick="alert(\'There\'s no registration needed.\')" class="btn regbtn">No Registration</button>'; 
+                    } 
+                } else { 
+                    echo '<p>No details available for the selected event.</p>'; 
+                } 
+                ?> 
+            </div>
+
+            <!-- Side bar container -->
+            <div class="image-link-container">
+                <p>Events</p>
+                <ul>
+                    <?php
+                    foreach ($eventDetails as $key => $value) {
+                        if ($key !== $eventNum) {
+                            echo '<li><a href="?event=' . $key . '"><img src="' . $value['Image'] . '" alt="' . $value['Title'] . '"></a></li>';
+                        }
+                    }
+                    ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div> 
+        <?php include "../footer/footer.php" ?> 
+    </div> 
+
+    <!-- Bootstrap and jQuery Scripts --> 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+    <script src="../javascript/header.js"></script> 
+</body> 
+</html>
+

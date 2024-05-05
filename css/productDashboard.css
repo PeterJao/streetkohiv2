@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(204, 192, 167, 0.8);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(241, 241, 241, 0.7);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-container h2 {
+  margin: 20px;
+  font-weight: bolder;
+}
+
+.header-container .btn-container {
+  margin: 20px;
+}
+
+.btn-container {
+  text-align: right;
+  margin: 20px;
+  margin-right: 50px;
+}
+
+.btn {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.btn-primary .btnCoffee {
+  background-color: #cc9e7d;
+  color: #584926;
+  font-weight: bold;
+}
+
+.coffee-image {
+  max-width: 100px;
+  max-height: 100px;
+}
+td,
+tr {
+  border: 3px solid #584926;
+}
+
+.coffee-table th,
+.event-table th {
+  border: 3px solid #584926;
+}
+
+.coffee-table {
+  background-color: #cc9e7d;
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border-radius: 10px;
+  text-align: left;
+  padding: 8px;
+  word-wrap: break-word;
+}
+
+.event-table {
+  background-color: #74a4cb;
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  word-wrap: break-word;
+}
+
+.furniture-table {
+  background-color: #a9b388;
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  word-wrap: break-word;
+}
+
+.coffee-table,
+.event-table {
+  max-width: 500px; /* Set fixed width */
+  margin: 20px auto; /* Add margin */
+  border-collapse: collapse;
+  border-radius: 10px;
+}
+
+td,
+th {
+  border: 3px solid #584926;
+  padding: 8px;
+  max-width: 200px; /* Limit maximum width of cells */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add ellipsis for overflow content */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.pagination-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.pagination {
+  font-family: "Abel", sans-serif;
+  display: inline-flex;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.page,
+.page-coffee,
+.page-furniture,
+.page-event {
+  color: #490404;
+  background: #eee;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 40px;
+  height: 40px;
+  width: 35px;
+  padding: 0;
+  margin: 20px;
+  border: none;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s ease 0s;
+}
+
+/* Styles for pagination links in Coffee table */
+.page-coffee {
+  color: #490404;
+  background: #eee;
+}
+
+/* Styles for pagination links in Furniture table */
+.page-furniture {
+  color: #490404;
+  background: #eee;
+}
+
+/* Styles for pagination links in Event table */
+.page-event {
+  color: #490404;
+  background: #eee;
+}
+
+/* Hover and focus styles for all pagination links */
+.pagination .page:hover,
+.pagination .page:focus,
+.pagination .page-coffee:hover,
+.pagination .page-coffee:focus,
+.pagination .page-furniture:hover,
+.pagination .page-furniture:focus,
+.pagination .page-event:hover,
+.pagination .page-event:focus {
+  color: #fff;
+  background: #490404;
+  line-height: 47px;
+}
+
+/* Styles for pagination link background before hover/focus */
+.pagination .page:before,
+.pagination .page-coffee:before,
+.pagination .page-furniture:before,
+.pagination .page-event:before {
+  content: "";
+  background-color: #fff;
+  border-radius: 30px;
+  opacity: 0;
+  transform-origin: top right;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  right: 5px;
+  bottom: 0;
+  z-index: -1;
+  transition: all 0.3s ease 0s;
+}
+
+/* Styles for pagination link background on hover/focus */
+.pagination .page:hover:before,
+.pagination .page:focus:before,
+.pagination .page-coffee:hover:before,
+.pagination .page-coffee:focus:before,
+.pagination .page-furniture:hover:before,
+.pagination .page-furniture:focus:before,
+.pagination .page-event:hover:before,
+.pagination .page-event:focus:before {
+  opacity: 1;
+  transform: scale(0.15);
+}
+
+/* Styles for active pagination link */
+.page.active,
+.page-coffee.active,
+.page-furniture.active,
+.page-event.active {
+  background-color: #490404; /* Darker shade for active state */
+  color: #fff; /* White text for active state */
+  transform: scale(0.95); /* Slightly reduce the size for active state */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+}

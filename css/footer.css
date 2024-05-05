@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to new line */
+  justify-content: space-between;
+  background-color: #ffefe4;
+  color: #5a483c;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 5%;
+}
+
+.footer-section {
+  max-width: 400px;
+  flex: 1; /* Equal width for each section */
+}
+
+.footer-section h3 {
+  color: #9f6b39;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.logo {
+  max-width: 150px;
+  margin-left: 25px;
+}
+
+.footer-section a {
+  color: #5a483c;
+  text-decoration: none;
+}
+
+.footer-section form.subscribe-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-section form.subscribe-form input {
+  padding: 10px;
+  margin-bottom: 8px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  margin-right: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-section form.subscribe-form button {
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+  background-color: #5a483c;
+  color: #ffefe4;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  flex-grow: 1; /* Make the button take up available space */
+}
+
+.footer-section form.subscribe-form button:hover {
+  background-color: #3e3528;
+}
+
+.subscribe-form {
+  margin-bottom: 16px;
+}
+
+.footer-bottom {
+  background-color: #5a483c;
+  text-align: center;
+  padding: 10px 0;
+  color: #ffefe4;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-icons li {
+  margin-bottom: 8px;
+  margin: 8px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+}
+
+.location-container {
+  list-style-type: none;
+  padding: 0;
+}
+
+.locationtxt {
+  text-align: left;
+}
+
+.location li {
+  text-align: left;
+}
+
+.locations {
+  width: 40px;
+  height: 40px;
+  padding-top: 8px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Change to column layout on smaller screens */
+    align-items: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px; /* Add some space between sections */
+  }
+
+  .logo {
+    margin-left: 0; /* Center the logo */
+  }
+}

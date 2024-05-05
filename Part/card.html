@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="card.css" />
+    <title>Card</title>
+  </head>
+  <body>
+    <h2>Hot</h2>
+
+    <div class="tablecards">
+      <div class="card" onclick="showModal('Espresso', 'Php 180')">
+        <img
+          src="./asset/img/espresso.png"
+          alt="espresso"
+          width="100%"
+          class="card-img"
+        />
+        <div class="card-txt">
+          <h3>Espresso</h3>
+          <p>Php 180</p>
+        </div>
+      </div>
+      <div class="card" onclick="showModal('Iced Latte', 'Php 180')">
+        <img
+          src="./asset/img/icedlatte.png"
+          alt="Icedlatte"
+          width="100%"
+          class="card-img"
+        />
+        <div class="card-txt">
+          <h3>IcedLatte</h3>
+          <p>Php 180</p>
+        </div>
+      </div>
+      <div class="card" onclick="showModal('Caramel Macchiato', 'Php 175')">
+        <img
+          src="./asset/img/caramelMacchiato.png"
+          alt="caramelMacchiato"
+          width="100%"
+          class="card-img"
+        />
+        <div class="card-txt">
+          <h3>CaramelMacchiato</h3>
+          <p>Php 175</p>
+        </div>
+      </div>
+      <div class="card" onclick="showModal('Iced Coconut Coffee', 'Php 190')">
+        <img
+          src="./asset/img/icedCoconut.png"
+          alt="icedCoconutCoffee"
+          width="100%"
+          class="card-img"
+        />
+        <div class="card-txt">
+          <h3>IcedCoconutCoffee</h3>
+          <p>Php 190</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img" alt="modal-image" width="100%" class="card-img" />
+        <div class="card-txt">
+          <h3 id="modal-title"></h3>
+          <p id="modal-description"></p>
+          <p class="modal-description-extra">
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, infused with coconut milk.
+          </p>
+
+          <div id="add-to-cart-container">
+            <button id="add-to-cart-button" onclick="addToCart()">
+              Add to Cart
+            </button>
+
+            <div class="quantity-picker">
+              <label for="quantity">Quantity:</label>
+              <div class="quantity-controls">
+                <button onclick="decrementQuantity()">-</button>
+                <input
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  min="1"
+                  value="1"
+                />
+                <button onclick="incrementQuantity()">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="card.js"></script>
+  </body>
+</html>

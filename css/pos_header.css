@@ -1,0 +1,123 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Container Styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+/* Logo Styles */
+.logo {
+  max-width: 250px;
+  margin-right: 75px;
+  margin-left: 50px;
+}
+
+/* Header Styles */
+.coffee-shop-header {
+  background-color: #35312e;
+  color: #5a483c;
+}
+
+.coffee-shop-header nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coffee-shop-header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.coffee-shop-header nav ul li {
+  margin: 15px;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.coffee-shop-header nav ul li a {
+  color: #ccc0a7;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 500;
+  position: relative;
+  transition: font-size 0.3s ease;
+}
+
+.coffee-shop-header nav ul li a:hover {
+  text-decoration: none;
+  transition: font-size 0.3s ease;
+}
+
+.coffee-shop-header nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  background-color: transparent;
+  transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+.coffee-shop-header nav ul li a:hover::before {
+  height: 4px;
+  margin-top: 15px;
+  background-color: #ccc0a7;
+}
+
+.coffee-shop-header nav ul li a.active {
+  font-weight: 600;
+  font-size: 28px;
+  color: #f1bf3e;
+}
+
+/* User Actions Styles */
+.user-actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.user-actions img {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+#loginStatus {
+  color: #ccc0a7;
+  font-size: 20px;
+  cursor: pointer;
+  transform: background-color 0.3s ease;
+}
+
+#loginStatus:hover {
+  color: #f1bf3e;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+  width: auto; /* Adjust the width dynamically based on content */
+  max-width: 300px; /* Set a maximum width to avoid excessive width */
+  max-height: 300px; /* Set a maximum height to limit the dropdown's height */
+}

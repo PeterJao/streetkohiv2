@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap");
+
+body {
+  font-family: "Manrope", sans-serif;
+  background: #eee;
+}
+
+.size span {
+  font-size: 11px;
+}
+
+.color span {
+  font-size: 11px;
+}
+
+.product-deta {
+  margin-right: 70px;
+}
+
+.gift-card:focus {
+  box-shadow: none;
+}
+
+.pay-button {
+  color: #fff;
+}
+
+.pay-button:hover {
+  color: #fff;
+}
+
+.pay-button:focus {
+  color: #fff;
+  box-shadow: none;
+}
+
+.text-grey {
+  color: #a39f9f;
+}
+
+.qty i {
+  font-size: 11px;
+}
+
+/* styles.css */
+.card-flex h4 {
+  font-size: 50px;
+  text-align: center;
+  border-bottom: 15px solid #e7dfd9;
+}
+
+.p-2 {
+  font-size: 20px;
+}

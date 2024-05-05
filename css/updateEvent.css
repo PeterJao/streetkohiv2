@@ -1,0 +1,246 @@
+/* Your custom CSS here */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@12..96&display=swap");
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(204, 192, 167, 0.8);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(241, 241, 241, 0.7);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.event-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.form-header {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.event-input-container {
+  background-color: #74a4cb;
+  padding: 40px;
+  border-radius: 10px;
+  width: calc(50% - 20px);
+}
+
+.input-container {
+  margin-top: 10px;
+  background-color: #74a4cb;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: relative;
+  color: white;
+}
+
+.input-container .label {
+  font-size: 15px;
+  padding-left: 10px;
+  position: absolute;
+  top: 13px;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+  padding: 0px 7px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 15px;
+  background-color: transparent;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.input:focus {
+  border: 2px solid transparent;
+  color: #fff;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 1),
+    -1px -1px 4px rgba(255, 255, 255, 0.4), inset 1px 1px 3px rgba(0, 0, 0, 1),
+    inset -1px -1px 4px rgba(255, 255, 255, 0.4);
+}
+
+.input-container .input:valid ~ .label,
+.input-container .input:focus ~ .label {
+  transition: 0.3s;
+  padding-left: 2px;
+  transform: translate(15px, -27px);
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.input-container .input:valid,
+.input-container .input:focus {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4), inset 3px 3px 10px rgba(0, 0, 0, 1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.input-container .label {
+  font-size: 15px;
+  padding-left: 10px;
+  transition: 0.3s;
+}
+
+.input-container .input:focus ~ .label {
+  transform: translate(15px, -27px) scale(0.8);
+}
+
+.input-image-container {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.input-image-container .input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.input-image-container .label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3a6b92;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  user-select: none;
+  gap: 0.75rem;
+  box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+  transition: all 0.6s ease;
+}
+
+.input-image-container .label:hover {
+  box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
+}
+
+.input-image-container .label:focus,
+.input-image-container .label:active {
+  opacity: 0.85;
+  box-shadow: none;
+}
+
+.input-image-container .label svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+button {
+  border: none;
+  display: flex;
+  padding: 0.75rem 1.5rem;
+  background-color: #064d63;
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  user-select: none;
+  gap: 0.75rem;
+  box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+  transition: all 0.6s ease;
+}
+
+button:hover {
+  box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
+}
+
+button:focus,
+button:active {
+  opacity: 0.85;
+  box-shadow: none;
+}
+
+button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: left;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.buttons-container {
+  gap: 10px;
+}
+
+.btn-success {
+  background-color: #51660e !important;
+}
+
+.btn-danger {
+  background-color: #c11111 !important;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  border: 1px solid #888;
+  border-radius: 5px;
+  padding: 20px;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

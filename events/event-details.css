@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@500&display=swap");
+
+/* event details edit start */
+.EventImageContainer {
+  width: 100%; 
+  margin-bottom: 20px;
+}
+
+.event-image { 
+  display: block; 
+  margin: auto; 
+  margin-left: 400px; 
+  width: 100vh;
+  box-shadow: 0 4px 8px 0 rgba(159, 107, 57, 0.2), 0 6px 20px 0 rgba(165, 105, 50, 0.50);
+  border: 10px solid #cea990;
+  box-sizing: border-box;
+  margin-top: 20px;
+  overflow: hidden;
+} 
+
+.image { 
+  display: block; 
+  margin: auto; 
+  width: 50vh;
+  height: auto;
+  
+}
+
+.event-title {
+  text-align: left;
+  color: #9f6b39;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-top: 50px;
+  padding-left: 90px; /* Adjust the padding for precise alignment */
+}
+  
+.event-date{ 
+    text-align: left; 
+    color: #333;  
+    font-size: 24px;  
+    margin-bottom: 20px;  
+    padding-left: 90px;
+    font-family: "Poppins", sans-serif;
+} 
+  
+.event-time{ 
+    text-align: left;  
+    color: #333;  
+    font-size: 24px; 
+    margin-bottom: 20px; 
+    padding-left: 90px;
+    font-family: "Poppins", sans-serif;
+} 
+  
+/* .event-where{  wala muna yung where
+    text-align: left; 
+    color: #333; 
+    font-size: 24px; 
+    margin-bottom: 0px; 
+    padding-left: 90px;
+    font-family: "Poppins", sans-serif;
+}  */
+  /* event details edit end */
+  
+  /* event description */ 
+.event-description { 
+    text-align: left justify; 
+    color: #666; 
+    font-size: 20px; 
+    padding-top: 10px;
+    padding-left: 90px;
+    padding-right: 100px;
+    display: flex;
+    font-family: "Poppins", sans-serif;
+} 
+  
+  /* main container which is the events */ 
+.event-details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+  
+.event-details {
+    flex: 1; 
+    margin-right: 20px;
+}
+  /* end of event container*/
+
+  /*image link container (side bar) start*/
+  .image-link-container {
+    width: 250px;
+    color: #000000;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px; /* Adjust the vertical positioning */
+    margin-right: 20px; /* Adjust the horizontal positioning */
+  }
+
+.image-link-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+  
+.image-link-container ul li {
+  margin-bottom: 20px;
+}
+  
+.image-link-container ul li img {
+  display: block;
+  width: 25vh;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(159, 107, 57, 0.2), 0 6px 20px 0 rgba(165, 105, 50, 0.50);
+  border: 10px solid #fae6d9;
+}
+
+  /*image link container (side bar) end*/
+  
+  /* Registration button start */
+.regbtn {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: bold; 
+  padding: 10px; 
+  background-color: #d4c4b9; 
+  color: #5a483c; 
+  transition: background-color 0.3s;
+  display: block;
+  margin: left;
+  margin-left: 90px;
+  margin-bottom: 25px;
+  max-width: 250px;
+
+}
+  
+.regbtn:hover { 
+    background-color: #cea990; 
+} 
+

@@ -1,0 +1,517 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@12..96&display=swap");
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(204, 192, 167, 0.8);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(241, 241, 241, 0.7);
+}
+
+/* Resetting default margin and padding */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Carousel Styles */
+.main-carousel {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 2.75rem;
+}
+
+.main-carousel img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Main Styles */
+main {
+  padding: 1.25rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Thumbnail Carousel Styles */
+#thumbnail-carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#thumbnail-carousel {
+  max-width: 100%;
+  background-color: #b0b8a9;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Events Title Styles */
+.events-title h1 {
+  color: #5a483c;
+  font-size: 2rem;
+}
+
+/* Events Section Styles */
+.events-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.event-container {
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
+  text-align: center;
+  text-align: left;
+  flex: 1 1 calc(33.33% - 3.5rem);
+  max-width: calc(33.33% - 3.5rem);
+  margin-bottom: 2rem;
+}
+
+.event-container .image-wrapper {
+  display: flex;
+  border: 2px solid transparent;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+
+.event-container img {
+  width: 100%;
+}
+
+.event-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #9f6b39;
+}
+
+.event-date {
+  font-size: 1rem;
+  color: #5a483c;
+}
+
+/* Selected Image Container Styles */
+#selected-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%; /* Ensure the container doesn't exceed the width of its parent */
+  max-height: 80vh; /* Set maximum height relative to viewport height */
+  overflow: hidden; /* Hide any overflow */
+}
+
+#selected-image {
+  width: auto; /* Ensure the image scales with its container */
+  max-width: 100%; /* Make sure the image doesn't exceed the width of the container */
+  max-height: 100%; /* Make sure the image doesn't exceed the height of the container */
+  height: auto; /* Allow the height to adjust proportionally */
+}
+
+/* Coffee Slider Styles */
+#coffee-slider {
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
+#coffee-slider .splide__track {
+  display: flex;
+}
+
+#coffee-slider .splide__slide {
+  width: 50%;
+}
+
+.slide-content {
+  display: flex;
+  height: 100%;
+}
+
+.left-side {
+  width: 50%;
+  overflow: hidden;
+}
+
+.left-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right-side {
+  width: 50%;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.right-side h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.right-side p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.right-side button {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Thumbnail Container Styles */
+.thumbnail-container {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbnail-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.thumbnail-container:hover {
+  opacity: 0.8;
+}
+
+/* Form Container Styles */
+.form-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  border: 1px solid transparent #ddd;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Allow contents to wrap */
+}
+
+.form-section,
+.contact-info {
+  text-align: left;
+  flex: 1;
+  padding: 5rem; /* Adjust padding as needed */
+}
+
+.form-section label {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.form-section button {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.form-section {
+  background-color: #ffefe4;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+  background-color: #000;
+  color: #ffefe4;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Control Styles */
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 190px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #000000 solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #000000;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: rgb(0, 0, 0);
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  color: #000000;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: rgb(0, 0, 0);
+  transform: translateY(-30px);
+}
+
+/* Checkbox Styles */
+form input[type="checkbox"] {
+  margin-right: 10px;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  outline: none;
+  cursor: pointer;
+}
+
+form input[type="checkbox"]:checked {
+  background-color: #333;
+  border: 2px solid #333;
+}
+
+.split-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  height: auto;
+  position: relative;
+  margin-bottom: 6rem;
+}
+
+.split-container .left-side,
+.split-container .right-side {
+  flex: 1;
+}
+
+.split-container img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.form-container {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+#next-button-previous {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#next-button-next {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#next-button-previous,
+#next-button-next {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50% !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#next-button-previous img,
+#next-button-next img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50% !important;
+}
+
+#split-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.left-side-split,
+.right-side-split {
+  width: 50%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.left-side-split img,
+.right-side-split img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .event-container {
+    flex: 0 0 calc(50% - 3.5rem);
+    max-width: calc(50% - 3.5rem);
+  }
+
+  .form-section,
+  .contact-info {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .event-container {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  .form-section,
+  .contact-info {
+    padding: 1rem;
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .form-section,
+  .contact-info {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form-container {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Adjust layout for mobile view */
+@media screen and (max-width: 768px) {
+  .events-section {
+    flex-direction: column; /* Stack events vertically */
+    align-items: center; /* Center events vertically */
+  }
+
+  .event-container {
+    flex: 1 1 100%; /* Full width for mobile view */
+    max-width: 100%; /* Full width for mobile view */
+    margin-left: 0; /* Remove left margin */
+    margin-right: 0; /* Remove right margin */
+    text-align: center; /* Center text for mobile view */
+  }
+}
