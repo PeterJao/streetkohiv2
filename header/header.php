@@ -1,3 +1,12 @@
+<?php
+session_start(); // Ensure session is started
+
+// Set default value for customer_id if not set
+if (!isset($_SESSION['customer_id'])) {
+    $_SESSION['customer_id'] = 0;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,11 +47,11 @@
           <li><a href="../community/community.php" onclick="handleNavClick(event)" class="nav-links">Community</a></li>
           <li><a href="../coffee/coffee.php" onclick="handleNavClick(event)" class="nav-links">Coffee</a></li>
           <li><a href="../events/events.php" onclick="handleNavClick(event)" class="nav-links">Events</a></li>
-          <?php if (isset($_SESSION['customer_id'])): ?>
-    <li><a href="../customer/logoutCustomer.php" class="nav-links">Logout</a></li>
-  <?php else: ?>
-    <li><a href="../customer/loginCustomer.php" class="nav-links">Login</a></li>
-  <?php endif; ?>
+          <?php if ($_SESSION['customer_id'] == 0): ?>
+            <li><a href="../customer/loginCustomer.php" class="nav-links">Login</a></li>
+          <?php else: ?>
+            <li><a href="../customer/logoutCustomer.php" class="nav-links">Logout</a></li>
+          <?php endif; ?>
         </ul>
       </div>
       <div class="hamburger"><button id="hamburger">&#9776;</button></div> <!-- Hamburger Icon -->
@@ -53,7 +62,9 @@
         <li><a href="../community/community.php" onclick="handleNavClick(event)" class="nav-links">Community</a></li>
         <li><a href="../coffee/coffee.php" onclick="handleNavClick(event)" class="nav-links">Coffee</a></li>
         <li><a href="../events/events.php" onclick="handleNavClick(event)" class="nav-links">Events</a></li>
-        <?php if (isset($_SESSION['customer_id'])): ?>
+        <?php if ($_SESSION['customer_id'] == 0): ?>
+          <li><a href="../customer/loginCustomer.php" class="nav-links">Login</a></li>
+        <?php else: ?>
           <li><a href="../customer/logoutCustomer.php" class="nav-links">Logout</a></li>
         <?php endif; ?>
       </ul>
